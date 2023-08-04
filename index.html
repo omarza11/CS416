@@ -1,10 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
     <head>
         <meta charset="utf-8">
         <title> CS416 Final Project</title>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
+        <div class = slideshow-container>
+            <div class= "slides fade" id = "Intro">
+                <img src="book.jpg">
+                <div class="intro">
+                    <h1>College Major Visualizations </h1>
+                    <h3>CS416 Data Visualization Project</h3>
+                    <p>Created by Omar Abdelqader</p>
 
+                </div>
+            </div>
+
+            <div class="slides fade" id="Slide1" >
+                <img src="background.jpg">
+                <div class="title">
+                    <h1>Overview of College Majors</h1>
+                    <div id = "bubble-chart"></div>
+                    <div class = "header">
+                        Scene 1
+                        <div class="text"> In this scene, you can find the popularity of majors along with their unemployment rate and salaries.
+                            <br>
+                            Hovering over the circles shows more information about each major as well!
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="slides fade" id="Slide2">
+                <img src="background.jpg">
+                <div class="title">
+                    <h1>Insight into Job placement</h1>
+                    <button onclick="swap()" class="button">Click Me</button>
+                    <div id = "bar-chart"></div>
+                    <div class = "header">
+                        Scene 2
+                        <div class="text"> Now you can see how well certain majors did in their job search after graduating. You can also see the amount of people in each major that <br>actually used their degree.
+                            <br>
+                            Hovering over the each bar will give you the percentage of graduates in that category.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slides fade" id="Slide3">
+                <img src="background.jpg">
+                <div class="title">
+                    
+                    <h1>Disparity in Males and Females in each Industry</h1>
+                    <a class="back" title="click to go back" id="go_back" onclick="reset()">&#10094;</a>
+                    <div id="double-bar-chart"></div>
+                    <div class = "header">
+                        Scene 3
+                        <div class="text"> Now you can see how well certain majors did in their job search after graduating. Also how many jobs are on the market for these majors.
+                            <br>
+                            Hovering over the each bar will give you the the number of men and women. Click on the bars for a suprise! 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slides fade" id="Resources">
+                <img src="background.jpg">
+                <div class="resources">
+                    <h1>Resources</h1>
+                    <h3> Github code</h3>
+                        <li><a href="https://github.com/omarza11/CS416">CS416 Final Project</a></li>
+                    <h3>Images</h3>
+                    <li><a href="https://nationaltoday.com/national-library-day/">Book Background Image</a></li>
+                    <li><a href="https://pixabay.com/photos/paper-old-texture-parchment-1074131/">Old Parchment Background</a></li>
+                    <h3>Dataset</h3>
+                    <li><a href="https://github.com/fivethirtyeight/data/tree/master/college-majors">College Majors Dataset</a></li>
+                    <h3> Code Resources</h3>
+                    <li><a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Slideshow design code</a></li>
+                    <li><a href ="https://d3-graph-gallery.com/graph/interactivity_tooltip.html#template">D3 Tooltip</a></li>
+                </div>
+            </div>
+
+            <a class="prev" title="click to go back" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" title="click to go forwrd" onclick="plusSlides(1)">&#10095;</a>
+            <div class="buttons" style="text-align:center">
+                <span class="dot" title="Intro" onclick="currentSlide(1)"></span>
+                <span class="dot" title="Overview" onclick="currentSlide(2)"></span>
+                <span class="dot" title="Job Placement"onclick="currentSlide(3)"></span>
+                <span class="dot" title="Gender Disparity" onclick="currentSlide(4)"></span>
+                <span class="dot" title="Resources" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="chart1.js"></script>
+        <script type="text/javascript" src="chart2.js"></script>
+        <script type="text/javascript" src="chart3.js"></script>
     </body>
 </html>
