@@ -9,7 +9,7 @@ var category_data = null;
 const color = d3.scaleOrdinal().domain(categories).range(colors);
 const easy_colors = d3.scaleOrdinal().range(d3.schemeCategory10);
 
-d3.csv("/recent-grads.csv", function(d) {
+d3.csv("/CS416/recent-grads.csv", function(d) {
 
     d.Total = +d.Total;
     d.Median = +d.Median;
